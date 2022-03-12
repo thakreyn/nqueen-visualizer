@@ -47,23 +47,18 @@ def render(screen,visited=[], solution = False):
     '''place queens accordng to the visited matrix we get from the solver'''
     placeQueens(screen,visited, solution)
 
-
     pygame.display.flip()
 
 screen = pygame.display.set_mode((screen_width, screen_height)) 
 # Set up the drawing window
 if __name__ == '__main__':
     
-    
-    
     # Run until the user asks to quit
 
     clock.tick(60)
     ev = pygame.event.poll()
-    
 
     t.solve(t.board, 0,t.left_row,t.lower_diagonal,t.upper_diagonal, N)
-    
         
     # Done! Time to quit.
     pygame.quit()
