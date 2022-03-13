@@ -45,18 +45,21 @@ def placeQueens(screen,visited, solution):
                 screen.blit(img, (i, j))
 
 
-def scoreBar(found_solutions,no_of_iterations):
+def scoreBar(no_of_iterations,found_solutions):
     '''Maintaing score bar'''
 
-    sols = font.render('Found Solutions :' + str(found_solutions),21,(48,213,200))
-    screen.blit(sols, ((N-N//2)*GridSize-4,screen_width+3))
+    sols = font.render('Solutions Found :' + str(found_solutions),21,(48,213,200))
+    screen.blit(sols, ((N-N//2)*GridSize-13,screen_width+3))
     iter = font.render('Iterations :'+ str(no_of_iterations),21,(48,213,200))
     screen.blit(iter, (10,screen_width+3))
     pygame.display.flip()
 
 
 def render(screen,visited=[], solution = False, no_of_iterations = 0, found_solutions = 0):
-    
+    '''Render the screen.
+       Calls all the functions and update the screen.
+    '''
+
     # to avoid overwriting or over-rendering
     screen.fill((0,0,0))
 
@@ -69,6 +72,8 @@ def render(screen,visited=[], solution = False, no_of_iterations = 0, found_solu
 
 screen = pygame.display.set_mode((screen_width, screen_height)) 
 # Set up the drawing window
+
+
 if __name__ == '__main__':
     
     # Run until the user asks to quit
