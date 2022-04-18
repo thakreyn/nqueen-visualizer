@@ -6,7 +6,7 @@ import time
 pygame.init()
 
 # number of queens
-N=8
+N=6
 
 # DIMENSIONS OF THE CHESS BOARD
 GridSize = 75

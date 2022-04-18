@@ -53,6 +53,6 @@ left_row = [0 for x in range(N)]
 upper_diagonal = [0 for x in range(2*N - 1)]
 lower_diagonal = [0 for x in range(2*N - 1)]
 
-solve(board, 0,left_row, lower_diagonal, upper_diagonal, N)
+# solve(board, 0,left_row, lower_diagonal, upper_diagonal, N)
 
 
